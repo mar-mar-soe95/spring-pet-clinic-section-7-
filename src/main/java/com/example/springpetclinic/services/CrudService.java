@@ -1,9 +1,7 @@
 package com.example.springpetclinic.services;
 
-import org.springframework.stereotype.Service;
-
 import java.util.Set;
-@Service
+
 public interface CrudService<T,ID> {
 	
 	T findById(Long id);
@@ -12,8 +10,8 @@ public interface CrudService<T,ID> {
 	
 	T save(T object);
 	
-	T delete();
+	void delete(T object);
 	
-	T deleteById(Long id);
+	void deleteById(Long id);
 
 }

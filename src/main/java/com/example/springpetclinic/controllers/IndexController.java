@@ -7,4 +7,10 @@ public class IndexController {
     public String getIndexPage(){
         return "index";
     }
+
+    @RequestMapping({"/find", "/oups"})
+    public String notImplement(){
+        return "notimplemented";
+    }
+
 }

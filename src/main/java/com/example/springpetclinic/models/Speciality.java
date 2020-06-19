@@ -1,6 +1,8 @@
 package com.example.springpetclinic.models;
 
-public class Speacility extends BaseEntity{
+public class Speciality extends BaseEntity{
+
+    private String description;
 
     public String getDescription() {
         return description;
@@ -10,6 +12,6 @@ public class Speacility extends BaseEntity{
         this.description = description;
     }
 
-    private String description;
+
 
 }

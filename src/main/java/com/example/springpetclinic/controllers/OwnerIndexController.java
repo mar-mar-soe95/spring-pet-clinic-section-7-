@@ -10,23 +10,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.ArrayList;
 import java.util.List;
 
+@RequestMapping("/owners")
 @Controller
 public class OwnerIndexController {
 
+    @Autowired
+    private  OwnerService ownerService;
 
-    @RequestMapping("/owner")
+    @RequestMapping({"/index","/index.html"})
     public String getOwnerList(Model model) {
 
-        List<Owner> ownerList = new ArrayList();
-
-        Owner owner1 = new Owner();
-        owner1.setId(1l);
-        owner1.setFirstName("Mar");
-        owner1.setLastName("Zi");
-
-        ownerList.add(owner1);
-
-        model.addAttribute("owners", ownerList);
+        model.addAttribute("owners", ownerService.findAll());
         return "owner/index";
+    }
+    @RequestMapping({"/find", "/oups"})
+    public String notImplement(){
+        return "notimplemented";
     }
 }

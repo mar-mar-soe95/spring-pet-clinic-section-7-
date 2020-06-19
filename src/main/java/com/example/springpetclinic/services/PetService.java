@@ -1,7 +1,7 @@
 package com.example.springpetclinic.services;
 
-import org.springframework.stereotype.Service;
 
-@Service
-public interface PetService<Pet> extends CrudService<Pet, Long>{
+import com.example.springpetclinic.models.Pet;
+
+public interface PetService extends CrudService<Pet, Long>{
 }
